@@ -1,4 +1,4 @@
-const BASE = '/api/blogs'
+const BASE = 'https://blog-backend-2-nvte.onrender.com/api/blogs'
 
 async function req(url, options = {}) {
   const res = await fetch(url, options)
