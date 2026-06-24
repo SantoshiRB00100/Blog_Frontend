@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import api from "../services/api";
 
-const IMAGE_BASE = "http://localhost:5000";
+const IMAGE_BASE = "https://blog-backend-8aq5.onrender.com";
 
 const DELAY_CLASSES = ["", "delay-1", "delay-2", "delay-3", "delay-4", "delay-5", "delay-6"];
 
