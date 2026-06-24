@@ -23,7 +23,10 @@ const BlogCard = ({ blog, fetchBlogs, index = 0 }) => {
       {/* Image with shimmer */}
       <div className="img-shimmer h-48 w-full flex-shrink-0">
         <img
-          src={`${IMAGE_BASE}${blog.image}`}
+          src={blog.image.startsWith("http") 
+            ? blog.image.replace("http://localhost:5000", "https://blog-backend-8aq5.onrender.com")
+            : `https://blog-backend-8aq5.onrender.com${blog.image}`
+          }
           alt={blog.title}
           className="w-full h-full object-cover"
         />
