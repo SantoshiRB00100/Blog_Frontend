@@ -21,18 +21,17 @@ const BlogCard = ({ blog, fetchBlogs, index = 0 }) => {
   return (
     <div className={`card-glow fade-up ${delayClass} flex flex-col`}>
       {/* Image with shimmer */}
-      <div className="img-shimmer h-48 w-full flex-shrink-0">
+      <div className="img-shimmer h-48 w-full flex-shrink-0 relative">
         <img
           src={blog.image.startsWith("http") 
-            ? blog.image.replace("http://localhost:5000", "https://blog-backend-8aq5.onrender.com")
-            : `https://blog-backend-8aq5.onrender.com${blog.image}`
+            ? blog.image.replace("http://localhost:5000", IMAGE_BASE)
+            : `${IMAGE_BASE}${blog.image}`
           }
           alt={blog.title}
           className="w-full h-full object-cover"
         />
-        {/* Gradient overlay bottom */}
         <div
-          className="absolute bottom-0 left-0 right-0 h-16"
+          className="absolute bottom-0 left-0 right-0 h-16 pointer-events-none"
           style={{ background: 'linear-gradient(to top, #161B27, transparent)' }}
         />
       </div>
